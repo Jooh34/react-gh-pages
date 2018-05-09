@@ -10,6 +10,8 @@ const Container = styled.div`
   height : 250px;
   background-color : #26262a;
   padding-top : 30px;
+  position : relative;
+  z-index : 5;
 `;
 
 const TextNavContainer = styled.div`

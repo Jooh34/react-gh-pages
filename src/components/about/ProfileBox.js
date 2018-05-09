@@ -6,8 +6,9 @@ import CircularSocialButtons from '../app/CircularSocialButtons';
 import ScrollDownButton from '../app/ScrollDownButton';
 
 const Container = styled.div`
+  background-color : #ffffff;
   width : 100%;
-  height : 600px;
+  height : 800px;
 
   padding-top : 50px;
   position : relative;
@@ -46,6 +47,8 @@ const TextContainer = styled.div`
 const NanumTemplete = styled.h1`
   margin-top : ${props => props.margin_top}px;
 
+  color : #545454;
+
   font-family :nanum;
   font-size : 2em;
   text-align : center;
@@ -54,6 +57,7 @@ const NanumTemplete = styled.h1`
 const AxisTemplete = styled.h2`
   margin-top : 15px;
 
+  color : #545454;
   font-family : blogger;
   font-size : 1.5em;
   text-align : center;

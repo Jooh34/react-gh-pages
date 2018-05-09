@@ -1,5 +1,6 @@
 const posts = [
   {
+    id : 16,
     title : '온라인 강의 자동 시청 with selenium',
     subtitle : '2018.05.02',
     description : '온라인 강의 자동으로 모두 시청해주는 프로그램. \
@@ -14,6 +15,7 @@ const posts = [
   },
 
   {
+    id : 15,
     title : 'Mnist Classification 문제 - Convolutional Neural Network 사용',
     subtitle : '2018.05.01 ',
     description : 'Tensorflow를 이용하여 Convolutional Neural Network(CNN)로 Mnist 이미지 분류. \
@@ -34,6 +36,7 @@ const posts = [
   },
 
   {
+    id : 14,
     title : 'Mnist Classification 문제 - Neural Network 사용',
     subtitle : '2018.04.29 ',
     description : 'Tensorflow를 이용하여 Neural Network로 Mnist 이미지 분류. \
@@ -52,6 +55,7 @@ const posts = [
   },
 
   {
+    id : 13,
     title : 'Mnist Classification 문제 - Logistic Regression 사용',
     subtitle : '2018.04.29 ',
     description : 'Tensorflow를 이용하여 Logistic Regression로 Mnist 이미지 분류. \
@@ -68,6 +72,7 @@ const posts = [
   },
 
   {
+    id : 12,
     title : 'React 개인 페이지',
     subtitle : '2018.04.18 ~ 2018.04.27',
     description : 'react를 사용한 Single Page Application으로 개인 웹페이지 제작하였습니다.',
@@ -84,6 +89,7 @@ const posts = [
   },
 
   {
+    id : 11,
     title : '강원학사 식단 앱',
     subtitle : '2018.04.07 ~ 2018.04.16',
     description : '대학생활 중 강원학사에 살면서 매번 웹으로 강원학사 식단을 확인하는게 번거롭다고 많이 느껴서 \
@@ -101,6 +107,7 @@ const posts = [
   },
 
   {
+    id : 10,
     title : '강원학사 식단 메뉴 서버',
     subtitle : '2018.04.07 ~ 2018.04.11',
     description : '강원학사 홈페이지에서 날짜 및 해당 날짜의 식단 정보 크롤링 연습. \
@@ -116,6 +123,7 @@ const posts = [
   },
 
   {
+    id : 9,
     title : '위치 기반 SNS 웹사이트 \'Happening\' 개발',
     subtitle : 'Mar 2017 ~ June 2017',
     description : 'Front-end : React/Redux , Back-end : Django-REST \
@@ -135,6 +143,7 @@ const posts = [
   },
 
   {
+    id : 8,
     title : 'Solving Rubik\'s Cube Game',
     subtitle : 'Dec 2017',
     description : '',
@@ -149,6 +158,7 @@ const posts = [
   },
 
   {
+    id : 7,
     title : 'Backward Ray Tracing',
     subtitle : 'Mar 2017 ~ June 2017',
     description : '',
@@ -163,6 +173,7 @@ const posts = [
   },
 
   {
+    id : 6,
     title : 'Shading - 조명과 그림자 효과 + BSP Tree 구현',
     subtitle : 'Mar 2017 ~ June 2017',
     description : '',
@@ -179,6 +190,7 @@ const posts = [
   },
 
   {
+    id : 5,
     title : 'Spline Curve - 스플라인 곡선을 이용하여 3D Model 디자인하기',
     subtitle : 'Mar 2017 ~ June 2017',
     description : '곡선을 디자인 하는 방법 중 ~적인 B-Spline 곡선과 Catmull-Rom 곡선을 이용하여 3D Model을 디자인하였습니다.',
@@ -193,6 +205,7 @@ const posts = [
   },
 
   {
+    id : 4,
     title : 'Virtual Trackball - 마우스 드래그에 따라 화면 전환 & 렌더링',
     subtitle : 'Mar 2017 ~ June 2017',
     description : '대부분의 3D tool들 마우스 드래그에 따라 회전시켜 물체의 모든 면을 볼 수 있게 합니다. \
@@ -210,6 +223,7 @@ const posts = [
   },
 
   {
+    id : 3,
     title : 'Hierarchical Modeling - hierarchical 3d 모델 디자인',
     subtitle : 'Mar 2017 ~ June 2017',
     description : 'OpenGL 의 modelview matrix stack 을 이용하여 Hierarchical Modeling 과 Animation을 구현하였습니다. \
@@ -225,6 +239,7 @@ const posts = [
   },
 
   {
+    id : 2,
     title : 'Event Driven Simulation - CSMA/CD, CSMA/CA',
     subtitle : 'May 2017',
     description : 'Ethernet의 2가지 MAC schemes 중 1-persistent CSMA + binary exponential backoff 방식의 scheme과 IEEE 802.11 CSMA-CA DCF 두 가지 방식을 \
@@ -240,6 +255,7 @@ const posts = [
   },
 
   {
+    id : 1,
     title : '서울대학교 식단 어플 \'식샤\' 유지 및 업데이트',
     subtitle : 'Oct 2016 ~ June 2017',
     description : '어플 개발 동아리 ‘와플 스튜디오’ 에서 서울대학교 식단 어플 ‘식샤’팀에 들어가 안드로이드 유지 및 업데이트 역할을 맡게 되었습니다. \
@@ -256,6 +272,7 @@ const posts = [
   },
 
   {
+    id : 0,
     title : '안드로이드 앱 개발 인턴 Qoo10',
     subtitle : 'Dec 2015 ~ Feb 2016',
     description : 'Qoo10 안드로이드 앱 개발팀에서 인턴을 하며 처음으로 자바와 안드로이드 앱 개발을 배웠습니다. \

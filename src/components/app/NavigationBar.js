@@ -6,16 +6,18 @@ const Container = styled.div`
   width : 100%;
   height : 80px;
   background-color : #26262a;
+  z-index : 5;
 `;
 
 const MenusContainer = styled.div`
-  padding-top : 20px;
+  padding-top : 12px;
   width : 40%;
   float : right;
+  margin-right : 200px;
 `;
 
 const MenuContainer = styled.div`
-  width : 33%;
+  width : 200px;
   margin-top : 5px;
   display: inline-block;
   cursor: pointer;
@@ -26,12 +28,14 @@ const Menu = styled.div`
   font-weight: bold;
   color : ${props => (props.mouseOn === props.name || props.mouseOn === '') ? '#ffffff' : '#8d888f'}
   background-color : #26262a;
-  font-size : 1em;
+  font-size : 1.2em;
   display: inline-block;
   margin-left : 20%;
   margin-top : 10px;
+  padding-top : 4px;
 
   width : 70%;
+  height : 30px;
   text-align : center;
 
   border : ${props => (props.mouseOn === props.name) ? '1px solid #ffffff' : ''}

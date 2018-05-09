@@ -7,6 +7,7 @@ import PaginationNavBar from './PaginationNavBar'
 const PostBackgroundContainer = styled.div`
   width : 100%;
   background-color : #edeeef;
+  position : relative;
 `;
 
 const PostListContainer = styled.div`
