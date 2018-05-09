@@ -8,7 +8,7 @@ import ScrollDownButton from '../app/ScrollDownButton';
 const Container = styled.div`
   background-color : #ffffff;
   width : 100%;
-  height : 800px;
+  height : 700px;
 
   padding-top : 50px;
   position : relative;

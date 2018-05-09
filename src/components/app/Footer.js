@@ -98,7 +98,7 @@ class Footer extends Component {
           <Bulkhead />
           <TextNav onClick = {()=>this.handleTextNavClick('about')}> ABOUT ME </TextNav>
           <Bulkhead />
-          <TextNav onClick = {()=>this.handleTextNavClick('post')}> MY WORK </TextNav>
+          <TextNav onClick = {()=>this.handleTextNavClick('post')}> PROJECT </TextNav>
         </TextNavContainer>
         <TopButtonContainer onClick = {this.handleTopButtonClick}>
           <IconContainer> <Icon name='chevron up' size = 'large' color = 'grey'/> </IconContainer>

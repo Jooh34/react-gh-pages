@@ -5,15 +5,15 @@ import styled from 'styled-components';
 const Container = styled.div`
   width : 100%;
   height : 80px;
-  background-color : #26262a;
   z-index : 5;
+  position : relative;
 `;
 
 const MenusContainer = styled.div`
   padding-top : 12px;
   width : 40%;
   float : right;
-  margin-right : 200px;
+  margin-right : 150px;
 `;
 
 const MenuContainer = styled.div`
@@ -27,7 +27,6 @@ const Menu = styled.div`
   font : axis;
   font-weight: bold;
   color : ${props => (props.mouseOn === props.name || props.mouseOn === '') ? '#ffffff' : '#8d888f'}
-  background-color : #26262a;
   font-size : 1.2em;
   display: inline-block;
   margin-left : 20%;
@@ -89,7 +88,7 @@ class NavigationBar extends Component {
             <Menu mouseOn = {this.state.mouseOn} name = 'about'> ABOUT ME </Menu>
           </MenuContainer>
           <MenuContainer onClick = {()=>this.handleMenuClick('post')} onMouseEnter ={() => this.handleMenuMouseEnter('post')} onMouseLeave ={() => this.handleMenuMouseLeave('post')}>
-            <Menu mouseOn = {this.state.mouseOn} name = 'post'> MY WORK </Menu>
+            <Menu mouseOn = {this.state.mouseOn} name = 'post'> PROJECT </Menu>
           </MenuContainer>
         </MenusContainer>
       </Container>
