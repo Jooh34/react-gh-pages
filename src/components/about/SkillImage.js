@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-
-const src = require('../../assets/images/project/preview/test.png');
-
 const ImageContainer = styled.div`
-  width : 500px;
-  height : 400px;
+  width : 400px;
+  height : 300px;
 
   position: relative;
-  margin-left : 10px;
+  margin-top : 20px;
+  margin-left : 20px;
   float : left;
 
   ${ImageLink}:hover & {
@@ -19,13 +17,13 @@ const ImageContainer = styled.div`
 `;
 
 const ImageLink = styled.a`
-  width : 500px;
-  height : 400px;
+  width : 400px;
+  height : 300px;
 `;
 
 const Img = styled.img`
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
 `;
 
 const TextCon = styled.div`

@@ -4,16 +4,7 @@ import styled from 'styled-components';
 import ScrollDownButton from '../app/ScrollDownButton';
 import SkillImage from './SkillImage';
 
-const skilldatum = [
-  {
-    src : require('../../assets/images/project/preview/test.png'),
-    name : 'test1'
-  },
-  {
-    src : require('../../assets/images/project/preview/test2.jpeg'),
-    name : 'test2'
-  }
-]
+const skilldatum = require('../../assets/skillpreview').default;
 
 const Container = styled.div`
   background-color : #edeeef;
