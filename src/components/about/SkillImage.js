@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const ImageContainer = styled.div`
-  width : 400px;
+  width : 450px;
   height : 300px;
 
   position: relative;
@@ -17,12 +17,12 @@ const ImageContainer = styled.div`
 `;
 
 const ImageLink = styled.a`
-  width : 400px;
+  width : 450px;
   height : 300px;
 `;
 
 const Img = styled.img`
-  width: 400px;
+  width: 450px;
   height: 300px;
 `;
 
