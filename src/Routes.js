@@ -8,7 +8,7 @@ import App from './components/App'
 class Routes extends Component {
   render() {
     return (
-      <Router>
+      <Router key={Math.random()}>
         <div>
           <App>
             <Switch>
