@@ -1,4 +1,4 @@
-import { SEARCH } from '../actions';
+import { SEARCH, RESULT_POSTS } from '../actions';
 import { combineReducers } from 'redux';
 
 const InitialState = {
@@ -8,12 +8,18 @@ const InitialState = {
 const search = (state = InitialState, action) => {
     switch(action.type) {
         case SEARCH:
-            return {
-              keyword : action.keyword,
-              ...state,
-            }
+          return {
+            keyword : action.keyword,
+            ...state,
+          }
+
+        case RESULT_POSTS:
+          return {
+            posts : action.posts,
+            ...state,
+          }
         default:
-            return state;
+          return state;
     }
 };
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 
 import PostItem from './PostItem'
 import PaginationNavBar from './PaginationNavBar'
@@ -68,5 +69,14 @@ class PostList extends Component {
     );
   }
 }
+
+let mapStateToProps = (state) => {
+    return {
+        keyword : state.search.keyword,
+        posts : state.search.posts
+    };
+}
+
+PostList = connect(mapStateToProps)(PostList);
 
 export default PostList;
