@@ -85,7 +85,7 @@ class ProfileBox extends Component {
   }
 
   handleScrollDown() {
-    var el = document.getElementById('footer');
+    var el = document.getElementById('skillsbox');
     el.scrollIntoView({ behavior: 'smooth' , block: "end"});
   }
 

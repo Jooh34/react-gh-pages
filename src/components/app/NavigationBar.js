@@ -27,18 +27,18 @@ const Menu = styled.div`
   font : axis;
   font-weight: bold;
   color : ${props => (props.mouseOn === props.name || props.mouseOn === '') ? '#ffffff' : '#8d888f'}
-  font-size : 1.2em;
+  font-size : 1.5em;
   display: inline-block;
   margin-left : 20%;
-  margin-top : 10px;
-  padding-top : 4px;
+  margin-top : 15px;
+  padding-top : 8px;
 
   width : 70%;
-  height : 30px;
+  height : 40px;
   text-align : center;
 
-  border : ${props => (props.mouseOn === props.name) ? '1px solid #ffffff' : ''}
-  border-radius: 20px;
+  border : ${props => (props.mouseOn === props.name) ? '2px solid #ffffff' : ''}
+  border-radius: 10px;
 `;
 
 const Bulkhead = styled.div`

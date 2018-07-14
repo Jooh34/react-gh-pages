@@ -13,7 +13,7 @@ var selected_text
 
 var post_text = ''
 var about_text = ''
-var home_text = 'Hi! Welcome to my webpage!'
+var home_text = 'Welcome ! I\'m Jooh'
 
 const Container = styled.div`
   background-image: url(${props => props.img});
@@ -27,13 +27,13 @@ const Container = styled.div`
 `;
 
 const TextContainer = styled.h2`
-  font : nanum;
+  font-family : trench;
   padding-top : 350px;
   width : 100%;
   height : 50px;
   text-align : center;
   color : #ffffff;
-  font-size : 3em;
+  font-size : 7em;
 `;
 
 class StickyBackground extends Component {

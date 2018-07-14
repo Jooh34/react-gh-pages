@@ -9,7 +9,7 @@ const ItemContainer = styled.div`
   background-color : #ffffff;
   padding-top : 30px;
 
-  border-bottom: 1px solid #edeeef;
+  border-bottom: 2px solid #edeeef;
 `;
 
 const ImageContainer = styled.div`
