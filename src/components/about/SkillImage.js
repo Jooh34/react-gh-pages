@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { search } from '../../actions';
+import { withRouter } from 'react-router-dom';
 
 const ImageContainer = styled.div`
   width : 450px;
@@ -58,14 +61,22 @@ class SkillImage extends Component {
 
   constructor(props) {
     super(props);
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
+  handleClick(e) {
+    this.props.setKeyword(this.props.skilldata.name);
+    var el = document.getElementById('profilebox');
+    el.scrollIntoView({ behavior: 'smooth' , block: "start", inline: "nearest"});
+    this.props.history.push('/post');
+  }
 
   render() {
     const skilldata = this.props.skilldata;
     return (
       <ImageContainer>
-        <ImageLink href = '#'>
+        <ImageLink onClick={this.handleClick} >
           <Img src = {skilldata.src}/>
           <TextCon>
             <BackText> {skilldata.name} </BackText>
@@ -76,4 +87,12 @@ class SkillImage extends Component {
   }
 }
 
-export default SkillImage;
+let mapDispatchToProps = (dispatch) => {
+    return {
+        setKeyword: (keyword) => dispatch(search(keyword))
+    };
+}
+
+SkillImage = connect(undefined, mapDispatchToProps)(SkillImage);
+
+export default withRouter(SkillImage);

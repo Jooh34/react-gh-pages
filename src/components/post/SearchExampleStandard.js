@@ -1,20 +1,26 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { Search, Grid, Header, Segment } from 'semantic-ui-react'
+import { connect } from 'react-redux';
+import { search } from '../../actions'
 
 const source = require('../../assets/posts').default;
 
-export default class SearchExampleStandard extends Component {
+class SearchExampleStandard extends Component {
   componentWillMount() {
     this.resetComponent()
   }
 
   resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
 
-  handleResultSelect = (e, { result }) => this.setState({ value: result.labels[0] })
+  handleResultSelect = (e, { result }) => {
+    this.setState({ value: result.labels[0] })
+    this.props.setKeyword(result.labels[0]);
+  }
 
   handleSearchChange = (e, { value }) => {
     this.setState({ isLoading: true, value })
+    this.props.setKeyword(value);
 
     setTimeout(() => {
       if (this.state.value.length < 1) return this.resetComponent()
@@ -30,7 +36,8 @@ export default class SearchExampleStandard extends Component {
   }
 
   render() {
-    const { isLoading, value, results } = this.state
+    const { isLoading, results } = this.state;
+    const value = this.props.value;
 
     return (
       <Grid>
@@ -48,3 +55,18 @@ export default class SearchExampleStandard extends Component {
     )
   }
 }
+let mapStateToProps = (state) => {
+    return {
+        value: state.search.keyword
+    };
+}
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        setKeyword: (keyword) => dispatch(search(keyword))
+    };
+}
+
+SearchExampleStandard = connect(mapStateToProps, mapDispatchToProps)(SearchExampleStandard);
+
+export default SearchExampleStandard;

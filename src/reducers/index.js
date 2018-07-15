@@ -9,14 +9,14 @@ const search = (state = InitialState, action) => {
     switch(action.type) {
         case SEARCH:
           return {
-            keyword : action.keyword,
             ...state,
+            keyword : action.keyword,
           }
 
         case RESULT_POSTS:
           return {
-            posts : action.posts,
             ...state,
+            posts : action.posts,
           }
         default:
           return state;

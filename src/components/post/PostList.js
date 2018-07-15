@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import _ from 'lodash'
 
 import PostItem from './PostItem'
 import PaginationNavBar from './PaginationNavBar'
@@ -41,6 +42,7 @@ class PostList extends Component {
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
+    this.getSearchedPosts = this.getSearchedPosts.bind(this);
   }
 
   handlePageChange(e, { activePage }) {
@@ -51,8 +53,21 @@ class PostList extends Component {
     });
   }
 
+  getSearchedPosts() {
+    const keyword = this.props.keyword
+    if (keyword.length < 1) return posts;
+
+    const re = new RegExp(_.escapeRegExp(keyword), 'i')
+    const isMatch = result => re.test(result.labels)
+
+    return _.filter(posts, isMatch)
+  }
+
   render() {
-    const activePosts = posts.slice((this.state.activePage-1)*5,this.state.activePage*5)
+    const searchedPosts = this.getSearchedPosts();
+    console.log(searchedPosts);
+
+    const activePosts = searchedPosts.slice((this.state.activePage-1)*5,this.state.activePage*5)
     return (
       <div id = 'postlist'>
         <PostBackgroundContainer>
@@ -62,7 +77,7 @@ class PostList extends Component {
           </SearchBarContainer>
           <PostListContainer>
               { activePosts.map(post => <PostItem post={post}/>) }
-            <PaginationNavBar handlePageChange={this.handlePageChange}/>
+            <PaginationNavBar searchedPosts = {searchedPosts} handlePageChange={this.handlePageChange}/>
           </PostListContainer>
         </PostBackgroundContainer>
       </div>
@@ -72,8 +87,7 @@ class PostList extends Component {
 
 let mapStateToProps = (state) => {
     return {
-        keyword : state.search.keyword,
-        posts : state.search.posts
+        keyword : state.search.keyword
     };
 }
 
