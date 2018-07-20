@@ -58,6 +58,10 @@ class StickyBackground extends Component {
       selected_img = home_img;
       selected_text = home_text;
     }
+    else if(path == "/") {
+      selected_img = home_img;
+      selected_text = home_text;
+    }
     else {
       selected_img = post_img;
       selected_text = "Post Detail";
