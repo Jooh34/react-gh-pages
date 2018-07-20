@@ -16,6 +16,7 @@ var about_text = ''
 var home_text = 'Welcome ! I\'m Jooh'
 
 const Container = styled.div`
+  background-color : #26262a
   background-image: url(${props => props.img});
   width: 100%;
   height: 800px;
@@ -53,9 +54,13 @@ class StickyBackground extends Component {
       selected_img = post_img;
       selected_text = post_text;
     }
-    else {
+    else if(path == "/react-gh-pages") {
       selected_img = home_img;
       selected_text = home_text;
+    }
+    else {
+      selected_img = post_img;
+      selected_text = "Post Detail";
     }
 
     return (

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Sticky } from 'semantic-ui-react';
 
 import ScrollDownButton from '../app/ScrollDownButton';
 

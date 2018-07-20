@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Icon, Image as ImageComponent, Item, Label } from 'semantic-ui-react'
 import styled from 'styled-components';
 import { Image } from 'semantic-ui-react'
+import { withRouter } from 'react-router-dom';
 
 const ItemContainer = styled.div`
   width : 100%;
@@ -47,8 +48,16 @@ const SubtitleTemplete = styled.h2`
 `;
 
 const TagContainer = styled.div`
-  width: 80%;
+  width: 75%;
   position: absolute;
+  bottom: 0;
+`;
+
+const SeeMore = styled.a`
+  width : 20%;
+  height : 50px;
+  float : right
+  border : 2px solid #004444;
   bottom: 0;
 `;
 
@@ -73,10 +82,15 @@ class PostItem extends Component {
   constructor(props) {
     super(props);
     this.handleDemoClick = this.handleDemoClick.bind(this);
+    this.handleVideoClick = this.handleVideoClick.bind(this);
   }
 
   handleDemoClick (url) {
     window.open(url);
+  }
+
+  handleVideoClick(id) {
+    this.props.history.push('/post/'+id);
   }
 
   render() {
@@ -99,6 +113,9 @@ class PostItem extends Component {
               </GithubURLContainer>
               <DemoURLContainer> { (post.demo_url) && <Label icon = {'external'} content ={'Demo'} color = {'blue'} as='a' onClick = {()=>this.handleDemoClick(post.demo_url)}/> } </DemoURLContainer>
             </TagContainer>
+            <div>
+            {(post.video) &&
+            <Label icon = {'video'} content ={'Video'} color = {'blue'} as='a' onClick = {()=>this.handleVideoClick(post.id)}/>} </div>
 
         </TextContainer>
       </ItemContainer>
@@ -106,4 +123,4 @@ class PostItem extends Component {
   }
 }
 
-export default PostItem;
+export default withRouter(PostItem);

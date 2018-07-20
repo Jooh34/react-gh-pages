@@ -78,14 +78,14 @@ const posts = [
     description : 'react를 사용한 Single Page Application으로 개인 웹페이지 제작하였습니다.',
     labels : [
       'Javascript',
-      'React',
+      'ReactJS',
       'Css',
       'Webpack',
       'SPA',
     ],
     cover : require('./images/project/webpage/webpage_cover.JPG'),
     github_url : 'https://github.com/Jooh34/jooh_page',
-    demo_url : 'http://34.213.112.175:3000/',
+    demo_url : 'https://jooh34.github.io/react-gh-pages/',
   },
 
   {
@@ -155,6 +155,7 @@ const posts = [
     ],
     cover : require('./images/project/graphics/cube/all.JPG'),
     github_url : 'https://github.com/Jooh34/jooh/tree/master/graphics/cube',
+    video : true
   },
 
   {
@@ -187,6 +188,7 @@ const posts = [
     ],
     cover : require('./images/project/graphics/shading/1.PNG'),
     github_url : 'https://github.com/Jooh34/jooh.git',
+    video : true,
   },
 
   {

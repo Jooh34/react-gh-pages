@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
 import { search } from '../../actions';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const ImageContainer = styled.div`
-  width : 450px;
-  height : 300px;
+  width : 350px;
+  height : 220px;
 
   position: relative;
   margin-top : 20px;
@@ -20,13 +20,14 @@ const ImageContainer = styled.div`
 `;
 
 const ImageLink = styled.a`
-  width : 450px;
-  height : 300px;
+width : 350px;
+height : 220px;
+  cursor : pointer;
 `;
 
 const Img = styled.img`
-  width: 450px;
-  height: 300px;
+width : 350px;
+height : 220px;
 `;
 
 const TextCon = styled.div`
@@ -62,21 +63,23 @@ class SkillImage extends Component {
   constructor(props) {
     super(props);
 
-    this.handleClick = this.handleClick.bind(this);
+    this.onhandleClick= this.onhandleClick.bind(this);
   }
 
-  handleClick(e) {
-    this.props.setKeyword(this.props.skilldata.name);
+  onhandleClick(keyword) {
+    this.props.setKeyword(keyword);
     var el = document.getElementById('profilebox');
-    el.scrollIntoView({ behavior: 'smooth' , block: "start", inline: "nearest"});
-    this.props.history.push('/post');
+    el.scrollIntoView({ behavior: 'smooth' , block: "end"});
+    this.props.history.push('/post')
+
   }
+
 
   render() {
     const skilldata = this.props.skilldata;
     return (
       <ImageContainer>
-        <ImageLink onClick={this.handleClick} >
+        <ImageLink onClick = {() => this.onhandleClick(skilldata.name)}>
           <Img src = {skilldata.src}/>
           <TextCon>
             <BackText> {skilldata.name} </BackText>

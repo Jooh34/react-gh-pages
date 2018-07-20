@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { Homepage, Aboutpage, Postpage } from './components/pages'
-import PostDetail from './components/post/PostDetail'
+import { Homepage, Aboutpage, Postpage, PostDetailPage } from './components/pages'
 import App from './components/App'
 
 class Routes extends Component {
@@ -15,7 +14,7 @@ class Routes extends Component {
               <Route exact path="/react-gh-pages" component={Homepage}/>
               <Route path="/about" component={Aboutpage}/>
               <Route exact path="/post" component={Postpage}/>
-              <Route path="/post/:postNum" component={PostDetail}/>
+              <Route path="/post/:postNum" component={PostDetailPage}/>
             </Switch>
           </App>
         </div>

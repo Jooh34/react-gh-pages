@@ -11,13 +11,13 @@ const Container = styled.div`
 
 const MenusContainer = styled.div`
   padding-top : 12px;
-  width : 40%;
+  width : 50%;
   float : right;
-  margin-right : 150px;
+  margin-right : 50px;
 `;
 
 const MenuContainer = styled.div`
-  width : 200px;
+  width : 30%;
   margin-top : 5px;
   display: inline-block;
   cursor: pointer;
