@@ -45,6 +45,7 @@ class StickyBackground extends Component {
 
   render() {
     const path = this.props.location.pathname;
+    console.log(path)
 
     if(path == "/about") {
       selected_img = about_img;
@@ -54,17 +55,13 @@ class StickyBackground extends Component {
       selected_img = post_img;
       selected_text = post_text;
     }
-    else if(path == "/react-gh-pages") {
-      selected_img = home_img;
-      selected_text = home_text;
-    }
-    else if(path == "/") {
-      selected_img = home_img;
-      selected_text = home_text;
+    else if(path.substr(0,6) == "/post/") {
+      selected_img = post_img;
+      selected_text = '';
     }
     else {
-      selected_img = post_img;
-      selected_text = "Post Detail";
+      selected_img = home_img;
+      selected_text = home_text;;
     }
 
     return (
