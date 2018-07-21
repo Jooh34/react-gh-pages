@@ -1,6 +1,6 @@
 const posts = [
   {
-    id : 16,
+    id : 17,
     title : '온라인 강의 자동 시청 with selenium',
     subtitle : '2018.05.02',
     description : '온라인 강의 자동으로 모두 시청해주는 프로그램. \
@@ -15,7 +15,7 @@ const posts = [
   },
 
   {
-    id : 15,
+    id : 16,
     title : 'Mnist Classification 문제 - Convolutional Neural Network 사용',
     subtitle : '2018.05.01 ',
     description : 'Tensorflow를 이용하여 Convolutional Neural Network(CNN)로 Mnist 이미지 분류. \
@@ -36,7 +36,7 @@ const posts = [
   },
 
   {
-    id : 14,
+    id : 15,
     title : 'Mnist Classification 문제 - Neural Network 사용',
     subtitle : '2018.04.29 ',
     description : 'Tensorflow를 이용하여 Neural Network로 Mnist 이미지 분류. \
@@ -55,7 +55,7 @@ const posts = [
   },
 
   {
-    id : 13,
+    id : 14,
     title : 'Mnist Classification 문제 - Logistic Regression 사용',
     subtitle : '2018.04.29 ',
     description : 'Tensorflow를 이용하여 Logistic Regression로 Mnist 이미지 분류. \
@@ -72,7 +72,7 @@ const posts = [
   },
 
   {
-    id : 12,
+    id : 13,
     title : 'React 개인 페이지',
     subtitle : '2018.04.18 ~ 2018.04.27',
     description : 'react를 사용한 Single Page Application으로 개인 웹페이지 제작하였습니다.',
@@ -89,7 +89,7 @@ const posts = [
   },
 
   {
-    id : 11,
+    id : 12,
     title : '강원학사 식단 앱',
     subtitle : '2018.04.07 ~ 2018.04.16',
     description : '대학생활 중 강원학사에 살면서 매번 웹으로 강원학사 식단을 확인하는게 번거롭다고 많이 느껴서 \
@@ -107,7 +107,7 @@ const posts = [
   },
 
   {
-    id : 10,
+    id : 11,
     title : '강원학사 식단 메뉴 서버',
     subtitle : '2018.04.07 ~ 2018.04.11',
     description : '강원학사 홈페이지에서 날짜 및 해당 날짜의 식단 정보 크롤링 연습. \
@@ -121,7 +121,25 @@ const posts = [
     github_url : 'https://github.com/Jooh34/haksasik-server.git',
     demo_url : 'http://34.213.112.175/menus/',
   },
-
+  {
+    id : 9,
+    title : 'DB를 사용한 Java Application - School System ',
+    subtitle : 'April 2017',
+    description : 'Oracle DB를 사용하여 학생,교수,강좌,시간 등등 학교 정보 시스템을 저장 및 제어하는 Java Application을 구현하였습니다. \
+    JDBC를 사용하여 DB와 Application을 연결하였고, SQL을 사용하여 DB를 조작하였습니다. \
+    전반적인 DBMS 원리를 이해했고, 이론으로 이해했던 SQL 문을 실제로 Application에 적용하며 사용법을 익혔습니다.',
+    labels : [
+      'DataBase',
+      'Oracle DB',
+      'SQL',
+      'Java',
+      'JDBC',
+      'SQL Developer'
+    ],
+    cover : require('./images/project/database/school.JPG'),
+    github_url : 'https://github.com/Jooh34/JDBCproject.git',
+    demo_url : 'https://github.com/Jooh34/JDBCproject.git',
+  },
   {
     id : 9,
     title : '위치 기반 SNS 웹사이트 \'Happening\' 개발',

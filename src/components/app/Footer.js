@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react';
+import { search } from '../../actions';
+import { connect } from 'react-redux';
 
 import CircularSocialButtons from './CircularSocialButtons';
 
@@ -80,7 +82,11 @@ class Footer extends Component {
 
   handleTextNavClick(name) {
     if (name === 'home') this.props.history.push('/react-gh-pages');
-    else this.props.history.push('/'+name);
+    else if(name === 'about') this.props.history.push('/'+name);
+    else if(name === 'post') {
+      this.props.setKeyword('');
+      this.props.history.push('/'+name);
+    }
 
     window.scrollTo(0, 0);
   }
@@ -111,5 +117,13 @@ class Footer extends Component {
     )
   }
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        setKeyword: (keyword) => dispatch(search(keyword))
+    };
+}
+
+Footer = connect(undefined, mapDispatchToProps)(Footer);
 
 export default withRouter(Footer)

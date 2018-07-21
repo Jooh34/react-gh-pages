@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
+import { search } from '../../actions';
+import { connect } from 'react-redux';
 
 const Container = styled.div`
   width : 100%;
@@ -61,7 +63,11 @@ class NavigationBar extends Component {
 
   handleMenuClick = (name) => {
     if (name === 'home') this.props.history.push('/react-gh-pages');
-    else this.props.history.push('/'+name);
+    else if(name === 'about') this.props.history.push('/'+name);
+    else if(name === 'post') {
+      this.props.setKeyword('');
+      this.props.history.push('/'+name);
+    }
   }
 
   handleMenuMouseEnter = (name) => {
@@ -95,5 +101,13 @@ class NavigationBar extends Component {
     )
   }
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        setKeyword: (keyword) => dispatch(search(keyword))
+    };
+}
+
+NavigationBar = connect(undefined, mapDispatchToProps)(NavigationBar);
 
 export default withRouter(NavigationBar);

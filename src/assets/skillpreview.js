@@ -19,6 +19,10 @@ const skillpreview = [
     src : require('./images/project/preview/datacom.jpg'),
     name : 'Data Communication'
   },
+  {
+    src : require('./images/project/preview/database.JPG'),
+    name : 'DataBase'
+  }
 ]
 
 export default skillpreview
